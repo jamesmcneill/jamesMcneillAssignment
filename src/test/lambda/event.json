@@ -1,0 +1,80 @@
+{
+    "requestAttributes": {
+        "x-amz-lex:accept-content-types": "PlainText,SSML",
+        "x-amz-lex:channels:platform": "Connect"
+    },
+    "sessionId": "48926992-2644-46bc-b58c-097fbf174187",
+    "inputTranscript": "yes",
+    "interpretations": [
+        {
+            "intent": {
+                "slots": {
+                    "numberToCheck": null
+                },
+                "confirmationState": "None",
+                "name": "EnterNumber",
+                "state": "InProgress"
+            },
+            "nluConfidence": 1
+        },
+        {
+            "intent": {
+                "slots": {},
+                "confirmationState": "None",
+                "name": "FallbackIntent",
+                "state": "InProgress"
+            }
+        }
+    ],
+    "proposedNextState": {
+        "intent": {
+            "slots": {
+                "numberToCheck": null
+            },
+            "confirmationState": "None",
+            "name": "EnterNumber",
+            "state": "InProgress"
+        },
+        "dialogAction": {
+            "slotToElicit": "numberToCheck",
+            "type": "ElicitSlot"
+        }
+    },
+    "responseContentType": "text/plain; charset=utf-8",
+    "sessionState": {
+        "sessionAttributes": {
+            "customerNumber": "+442890167047",
+            "x-amz-lex:dtmf:end-timeout-ms:*.*": "2000"
+        },
+        "originatingRequestId": "0b7acc10-9ecc-4309-bef0-db2a344784b5",
+        "intent": {
+            "slots": {
+                "numberToCheck": null
+            },
+            "confirmationState": "None",
+            "name": "EnterNumber",
+            "state": "InProgress"
+        }
+    },
+    "messageVersion": "1.0",
+    "invocationSource": "DialogCodeHook",
+    "transcriptions": [
+        {
+            "resolvedContext": {
+                "intent": "EnterNumber"
+            },
+            "transcription": "yes",
+            "resolvedSlots": {},
+            "transcriptionConfidence": 0.94
+        }
+    ],
+    "inputMode": "Speech",
+    "bot": {
+        "aliasName": "james-mcneill-vanity-numbers-alias",
+        "aliasId": "MARTIRQX6T",
+        "name": "james-mcneill-vanity-numbers-bot",
+        "version": "2",
+        "localeId": "en_US",
+        "id": "K2IX4ATER9"
+    }
+}

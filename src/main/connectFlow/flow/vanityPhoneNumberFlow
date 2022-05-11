@@ -1,0 +1,124 @@
+{
+    "modules": [
+        {
+            "id": "96f62f74-1905-40cd-acca-714c0782717a",
+            "type": "Disconnect",
+            "branches": [],
+            "parameters": [],
+            "metadata": {
+                "position": {
+                    "x": 721,
+                    "y": 125
+                }
+            }
+        },
+        {
+            "id": "431f29e2-cca7-44e4-a449-90a38c2d327b",
+            "type": "PlayPrompt",
+            "branches": [
+                {
+                    "condition": "Success",
+                    "transition": "96f62f74-1905-40cd-acca-714c0782717a"
+                },
+                {
+                    "condition": "Error",
+                    "transition": "96f62f74-1905-40cd-acca-714c0782717a"
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "Text",
+                    "value": "Sorry, an error has occurred.",
+                    "namespace": null
+                },
+                {
+                    "name": "TextToSpeechType",
+                    "value": "text"
+                }
+            ],
+            "metadata": {
+                "position": {
+                    "x": 461,
+                    "y": 217
+                },
+                "useDynamic": false
+            }
+        },
+        {
+            "id": "04017887-73bd-465e-a782-323a3e330242",
+            "type": "GetUserInput",
+            "branches": [
+                {
+                    "condition": "NoMatch",
+                    "transition": "96f62f74-1905-40cd-acca-714c0782717a"
+                },
+                {
+                    "condition": "Error",
+                    "transition": "431f29e2-cca7-44e4-a449-90a38c2d327b"
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "Text",
+                    "value": "Do you want to hear vanity numbers for the phone number you are calling from?",
+                    "namespace": null
+                },
+                {
+                    "name": "TextToSpeechType",
+                    "value": "text"
+                },
+                {
+                    "name": "BotAliasArn",
+                    "value": "arn:aws:lex:us-east-1:212600133402:bot-alias/K2IX4ATER9/MARTIRQX6T",
+                    "namespace": null
+                },
+                {
+                    "name": "LexVersion",
+                    "value": "V2"
+                },
+                {
+                    "name": "Parameter",
+                    "key": "x-amz-lex:dtmf:end-timeout-ms:*.*",
+                    "value": "2000",
+                    "namespace": null
+                },
+                {
+                    "name": "Parameter",
+                    "key": "customerNumber",
+                    "value": "Customer Number",
+                    "namespace": "System"
+                }
+            ],
+            "metadata": {
+                "position": {
+                    "x": 209,
+                    "y": 36
+                },
+                "conditionMetadata": [],
+                "useDynamic": false,
+                "dynamicMetadata": {
+                    "x-amz-lex:dtmf:end-timeout-ms:*.*": false,
+                    "customerNumber": true
+                },
+                "useLexBotDropdown": false,
+                "useDynamicLexBotArn": false
+            },
+            "target": "Lex"
+        }
+    ],
+    "version": "1",
+    "start": "04017887-73bd-465e-a782-323a3e330242",
+    "metadata": {
+        "entryPointPosition": {
+            "x": 31,
+            "y": 15
+        },
+        "snapToGrid": false,
+        "name": "vanityPhoneNumberFlow",
+        "description": "Invoke a Lex Bot to read out vanity numbers",
+        "type": "contactFlow",
+        "status": "published",
+        "hash": "b23ecea0d1e9c6ad091df6717c295bb9be6a1a3539c105cb211d16773cc96a3f"
+    },
+    "type": "contactFlow"
+}

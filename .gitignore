@@ -1,0 +1,109 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/*
+.vscode/*
+
+# Servlerless stuff
+.serverless
+
+# CDK Stuff
+cdk.out
+template.yaml
+input.json
+
+# SAM Stuff
+.aws-sam/*
+
+# CMake
+cmake-build-debug/
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# history
+.history/
+
+# IntelliJ
+out/
+target/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Generated html/js files
+src/main/resources/static/
+
+# node_modules in front-end folder
+**/node_modules/
+
+# distribution folder in front-end folder
+dist/
+artifacts/
+
+# Reports from webpack etc...
+report.html
+
+*.iml
+.project
+.classpath
+.settings/
+
+# code coverage
+coverage/**
+test-reports/**
+
+debug.log
+.serverless/
+_optimize/
+.ni-optimized
+
+out.txt
+/coverage/
+yarn-error.log
+
+bin/**/*.js
+bin/**/*.d.ts
+lib/**/*.js
+lib/**/*.d.ts
+src/main/lambda/**/*.d.ts
+spec/helpers/*.d.ts
+spec/helpers/*.js
+src/test/stack/*.js
+src/test/stack/*.d.ts
+src/test/stack/**/*.js
+src/test/stack/**/*.d.ts
+src/test/configuration/*.js
+src/test/configuration/*.d.ts
+src/test/utils/*.js
+src/test/utils/*.d.ts
+
+**/*test.d.ts
+**/*test.js
+
+.nyc_output/
+build/
+.DS_Store
+
+# gradle
+
+.gradle/
+
+# allure
+
+.allure
+/allure-report/
+/target/
+/target/**/*
